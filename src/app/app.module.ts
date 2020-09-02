@@ -1,3 +1,4 @@
+import { TrColorDirective } from './Directives/tr-color.directive';
 import { DataService } from './services/data.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -39,6 +40,8 @@ import { EditUserComponent } from './components/edit-user/edit-user.component';
 import { ReversePipe } from './pipes/reverse.pipe';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,6 +75,7 @@ import { ReversePipe } from './pipes/reverse.pipe';
     AdminSpaceComponent,
     EditUserComponent,
     ReversePipe,
+    TrColorDirective
     
   ],
   imports: [
