@@ -1,0 +1,18 @@
+<div class="custom-media d-flex">
+    <div class="img mr-4">
+      <img src="assets/images/img_3.jpg" alt="Image" class="img-fluid" />
+    </div>
+    <div class="text">
+      <span class="meta">{{dataPlayer.date}}</span>
+      <h3 class="mb-4"><a href="#">{{dataPlayer.title}}</a></h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
+        deserunt saepe tempora dolorem.
+      </p>
+      <div class="form-group ">
+      <input type="submit" (click)='goToPlayer(dataPlayer.id)' class="btn btn-primary py-3 px-5" value="More Infos" />
+      <input type="submit" (click)="deletePlayer(dataPlayer.id)" class="btn btn-success py-3 px-5" value="Delete" />
+    
+    </div>
+    </div>
+  </div>

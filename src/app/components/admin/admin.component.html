@@ -1,0 +1,29 @@
+
+<div class="container">
+  <div class="widget-next-match">
+    <table class="table custom-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Action</th>
+  
+        </tr>
+      </thead>
+      <tbody *ngFor="let u of users">
+          <tr>
+            <td>{{u.id}}</td>
+            <td>{{u.FName}}</td>
+            <td >{{u.LName}}</td>
+            <td ><button class="btn btn-success"  (click)='deleteUser(u.id)'>Delete</button>
+            <button class="btn btn-danger" (click)='goToUser(u.id)'>Display</button>
+            <button class="btn btn-info" (click)='goToEditUser(u.id)'>Edit</button>
+          </td>
+
+          </tr>
+          <!-- <app-table [dataUser]="u"></app-table> -->
+      </tbody>
+    </table>
+  </div>
+</div>

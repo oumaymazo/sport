@@ -1,0 +1,45 @@
+<div class="container">
+  <form class="padding" [formGroup]="userLogin">
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Email"
+        formControlName="loginEmail"
+      />
+    </div>
+    <div
+      *ngIf="userLogin.controls['loginEmail'].invalid && (userLogin.controls['loginEmail'].dirty || userLogin.controls['loginEmail'].touched)"
+      class="alert alert-danger"
+    >
+      <div *ngIf="userLogin.controls['loginEmail'].errors.required">
+        Email required
+      </div>
+      <div *ngIf="userLogin.controls['loginEmail'].errors.email">
+        Email not valid
+      </div>
+    </div>
+    <div class="form-group">
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Password"
+        formControlName="loginPwd"
+      />
+    </div>
+    <div
+      *ngIf="userLogin.controls['loginPwd'].invalid && (userLogin.controls['loginPwd'].dirty || userLogin.controls['loginPwd'].touched)"
+      class="alert alert-danger"
+    >
+      <div *ngIf="userLogin.controls['loginPwd'].errors.required">
+        pwd required
+      </div>
+      <div *ngIf="userLogin.controls['loginPwd'].errors.maxlength">
+        pwd max length:8
+      </div>
+    </div>
+    <div class="form-group center">
+      <input type="submit" (click)='login()' class="btn btn-primary py-3 px-5" value="Login" />
+    </div>
+  </form>
+</div>

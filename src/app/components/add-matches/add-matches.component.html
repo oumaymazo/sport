@@ -1,0 +1,68 @@
+<div
+  class="hero overlay"
+  style="background-image: url('assets/images/bg_3.jpg');"
+>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-9 mx-auto text-center">
+        <h1 class="text-white">Add Matches</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <form #addMatchesForm="ngForm" (ngSubmit)="Add()">
+          <div class="form-group">
+            <input
+              [ngModelOptions]="{ standalone: true }"
+              type="text"
+              class="form-control"
+              placeholder="team One"
+              [(ngModel)]="addMatch.teamOne"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              [ngModelOptions]="{ standalone: true }"
+              type="text"
+              class="form-control"
+              placeholder="team Two"
+              [(ngModel)]="addMatch.teamTwo"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              [ngModelOptions]="{ standalone: true }"
+              type="text"
+              class="form-control"
+              placeholder="score One"
+              [(ngModel)]="addMatch.scoreOne"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              [ngModelOptions]="{ standalone: true }"
+              type="text"
+              class="form-control"
+              placeholder="score Two"
+              [(ngModel)]="addMatch.scoreTwo"
+            />
+          </div>
+
+          <div class="form-group center">
+            <input
+              type="submit"
+              class="btn btn-primary py-3 px-5 "
+              value="Add"
+            />
+          </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>

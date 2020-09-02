@@ -1,0 +1,131 @@
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <form [formGroup]="userForm">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="First Name"
+              formControlName="firstName"
+            />
+          </div>
+          <div
+            *ngIf="
+              userForm.controls['firstName'].invalid &&
+              (userForm.controls['firstName'].dirty||
+                userForm.controls['firstName'].touched)
+            "
+            class="alert alert-danger"
+          >
+            <div *ngIf="userForm.controls['firstName'].errors.minlength">
+              First Name min length :5
+            </div>
+
+            <div *ngIf="userForm.controls['firstName'].errors.required">
+              First Name required
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Last Name"
+              formControlName="lastName"
+            />
+          </div>
+          <div
+            *ngIf="
+              userForm.controls['lastName'].invalid &&
+              (userForm.controls['lastName'].dirty ||
+                userForm.controls['lastName'].touched)
+            "
+            class="alert alert-danger"
+          >
+            <div *ngIf="userForm.controls['lastName'].errors.minlength">
+              last Name min length :5
+            </div>
+            <div *ngIf="userForm.controls['lastName'].errors.required">
+              last Name required
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Email"
+              formControlName="email"
+            />
+          </div>
+          <div
+            *ngIf="
+              userForm.controls['email'].invalid &&
+              (userForm.controls['email'].dirty ||
+                userForm.controls['email'].touched)
+            "
+            class="alert alert-danger"
+          >
+            <div *ngIf="userForm.controls['email'].errors.email">
+              Emain not valid
+            </div>
+            <div *ngIf="userForm.controls['email'].errors.required">
+              Email required
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Password"
+              formControlName="pwd"
+            />
+          </div>
+          <div
+            *ngIf="
+              userForm.controls['pwd'].invalid &&
+              (userForm.controls['pwd'].dirty ||
+                userForm.controls['email'].touched)
+            "
+            class="alert alert-danger"
+          >
+            <div *ngIf="userForm.controls['pwd'].errors.required">
+              pwd required
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Phone number"
+              formControlName="phoneNumber"
+              pattern="\d*" maxlength="8" />
+          </div>
+          <div
+            *ngIf="
+              userForm.controls['phoneNumber'].invalid &&
+              (userForm.controls['phoneNumber'].dirty ||
+                userForm.controls['phoneNumber'].touched)
+            "
+            class="alert alert-danger"
+          >
+            <!-- <div *ngIf="userForm.controls['phoneNumber'].errors.maxlength">
+              phone number max length:8
+            </div> -->
+            <div *ngIf="userForm.controls['phoneNumber'].errors.required">
+              Phone number required
+            </div>
+          </div>
+          <div class="form-group center">
+            <input
+              type="submit"
+              (click)="signup()"
+              class="btn btn-primary py-3 px-5"
+              value="Sign Up"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

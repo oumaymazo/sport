@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+.center
+{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.padding
+{
+    padding-top: 100px;
+}
+.margin{
+    margin-bottom: 150px;
+}
